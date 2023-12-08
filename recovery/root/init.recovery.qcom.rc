@@ -93,3 +93,5 @@ on property:sys.usb.config=fastboot && property:sys.usb.ffs.ready=1 && property:
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+import /init.recovery.qcom_decrypt.rc

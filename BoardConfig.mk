@@ -185,7 +185,11 @@ TARGET_COPY_OUT_PRODUCT := product
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Kernel module loading
-TW_LOAD_VENDOR_MODULES := "exfat.ko \
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko \
+            exfat.ko \
+            mmi-smbcharger-iio.ko \
+            mmi_parallel_charger_iio.ko \
+            mmi_relay.ko \
             focaltech_v3.ko \
             goodix_brl_mmi.ko \
             ldo_vibrator_mmi.ko \
