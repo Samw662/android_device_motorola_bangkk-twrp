@@ -1,4 +1,4 @@
-# TWRP Device configuration for Motorola Moto G(82) 5G
+# TWRP Device configuration for Motorola Moto G84 5G
 
 ## Device specification
 
@@ -53,6 +53,6 @@ Finally execute these:
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
-lunch twrp_corfur-eng
-make adbd bootimage
+lunch twrp_bangkk-eng
+mka bootimage -j$(nproc --all)
 ```

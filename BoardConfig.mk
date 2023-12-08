@@ -199,7 +199,6 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko \
             synaptics_tcm_testing.ko \
             synaptics_tcm_touch.ko \
             synaptics_tcm_zeroflash.ko \
-            mmi_relay.ko \
             focaltech_v3.ko \
             goodix_brl_mmi.ko \
             ldo_vibrator_mmi.ko \
