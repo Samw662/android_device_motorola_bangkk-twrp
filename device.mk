@@ -88,6 +88,16 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 # Copy modules for depmod
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/adsp_loader_dlkm.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/adsp_loader_dlkm.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_core.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_device.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_device.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_diagnostics.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_diagnostics.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_i2c.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_i2c.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_recovery.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_recovery.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_reflash.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_reflash.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_spi.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_spi.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_testing.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_testing.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_touch.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_touch.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/synaptics_tcm_zeroflash.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/synaptics_tcm_zeroflash.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/exfat.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/exfat.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/mmi-smbcharger-iio.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/mmi-smbcharger-iio.ko \
     $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/mmi_parallel_charger_iio.ko:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/modules/1.1/mmi_parallel_charger_iio.ko \

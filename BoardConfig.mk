@@ -189,6 +189,16 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko \
             exfat.ko \
             mmi-smbcharger-iio.ko \
             mmi_parallel_charger_iio.ko \
+            synaptics_tcm_core.ko \
+            synaptics_tcm_device.ko \
+            synaptics_tcm_diagnostics.ko \
+            synaptics_tcm_i2c.ko \
+            synaptics_tcm_recovery.ko \
+            synaptics_tcm_reflash.ko \
+            synaptics_tcm_spi.ko \
+            synaptics_tcm_testing.ko \
+            synaptics_tcm_touch.ko \
+            synaptics_tcm_zeroflash.ko \
             mmi_relay.ko \
             focaltech_v3.ko \
             goodix_brl_mmi.ko \
