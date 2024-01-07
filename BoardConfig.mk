@@ -27,7 +27,7 @@ TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a75
+TARGET_CPU_VARIANT_RUNTIME := kryo660
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -189,6 +189,10 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko \
             exfat.ko \
             mmi-smbcharger-iio.ko \
             mmi_parallel_charger_iio.ko \
+            apr_dlkm.ko \
+            q6_notifier_dlkm.ko \
+            qpnp-smb5-main.ko \
+            snd_event_dlkm.ko \
             synaptics_tcm_core.ko \
             synaptics_tcm_device.ko \
             synaptics_tcm_diagnostics.ko \
