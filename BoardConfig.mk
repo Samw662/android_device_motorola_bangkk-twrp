@@ -145,10 +145,12 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-TW_INCLUDE_CRYPTO := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TW_USE_FSCRYPT_POLICY := 1
+
+# Fix for copying *.ko
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
@@ -171,6 +173,12 @@ TW_HAS_EDL_MODE := true
 TW_Y_OFFSET := 48
 TW_H_OFFSET := -48
 
+# Statusbar icons flags
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CLOCK_POS := 50
+TW_CUSTOM_CPU_POS := 280
+TW_CUSTOM_BATTERY_POS := 790
+
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
@@ -184,36 +192,15 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 
+# Don't mount apex files (no need for now)
+TW_EXCLUDE_APEX := true
+
 # Kernel module loading
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko \
-            exfat.ko \
-            mmi-smbcharger-iio.ko \
-            mmi_parallel_charger_iio.ko \
-            apr_dlkm.ko \
-            q6_notifier_dlkm.ko \
-            qpnp-smb5-main.ko \
-            snd_event_dlkm.ko \
-            synaptics_tcm_core.ko \
-            synaptics_tcm_device.ko \
-            synaptics_tcm_diagnostics.ko \
-            synaptics_tcm_i2c.ko \
-            synaptics_tcm_recovery.ko \
-            synaptics_tcm_reflash.ko \
-            synaptics_tcm_spi.ko \
-            synaptics_tcm_testing.ko \
-            synaptics_tcm_touch.ko \
-            synaptics_tcm_zeroflash.ko \
-            focaltech_v3.ko \
-            goodix_brl_mmi.ko \
-            ldo_vibrator_mmi.ko \
-            mmi_annotate.ko \
-            mmi_info.ko \
-            mmi_sys_temp.ko \
-            moto_f_usbnet.ko \
-            qpnp_adaptive_charge.ko \
-            sensors_class.ko \
-            touchscreen_mmi.ko \
-            utags.ko"
+TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules/1.1)\")
+TW_LOAD_VENDOR_BOOT_MODULES := true
+
+# Include decryption support
+TW_INCLUDE_CRYPTO := true
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
