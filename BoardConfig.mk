@@ -168,8 +168,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
 #TW_NO_SCREEN_BLANK := true
 TW_HAS_EDL_MODE := true
-TW_Y_OFFSET := 48
-TW_H_OFFSET := -48
+TW_Y_OFFSET := 115
+TW_H_OFFSET := -115
 
 # Statusbar icons flags
 TW_STATUS_ICONS_ALIGN := center
