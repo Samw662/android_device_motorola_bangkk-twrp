@@ -75,6 +75,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# QCOM Encryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Blacklist
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.bootimage.build.date.utc \
