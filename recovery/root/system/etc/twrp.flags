@@ -4,6 +4,7 @@
 
 # mount point    fstype     device                 device2                        flags
 /boot            emmc       /dev/block/bootdevice/by-name/boot                    flags=slotselect;backup=1;flashimg=1
+/vendor_boot     emmc       /dev/block/bootdevice/by-name/vendor_boot             flags=backup=1;display="Vendor Boot";slotselect;flashimg=1
 /dtbo            emmc       /dev/block/bootdevice/by-name/dtbo                    flags=backup=1;display="DTBO";slotselect;flashimg=1
 /vbmeta          emmc       /dev/block/bootdevice/by-name/vbmeta                  flags=backup=1;display="VBMeta";slotselect;flashimg=1
 /data            f2fs       /dev/block/bootdevice/by-name/userdata                flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0;keydirectory=/metadata/vold/metadata_encryption;metadata_encryption=aes-256-xts:wrappedkey_v0

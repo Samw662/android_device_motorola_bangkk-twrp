@@ -33,12 +33,14 @@ LOCAL_PATH := device/motorola/bangkk
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    system \
-    vendor \
+    dtbo \
     product \
+    system \
+    system_ext \
+    vendor \
+    vendor_boot \
     vbmeta \
-    vbmeta_system \
-    dtbo
+    vbmeta_system
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
