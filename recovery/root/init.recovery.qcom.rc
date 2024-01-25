@@ -35,12 +35,16 @@ on boot
 on init
    setprop prepdecrypt.loglevel 2 
    setprop prepdecrypt.setpatch true
+   setprop sys.usb.configfs 1
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
     export LD_LIBRARY_PATH /sbin:/vendor/lib64:/vendor/lib64/hw
+    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
+    # Mount firmware
+    mkdir /firmware
+    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
 
 on post-fs
     start boot-hal-1-1
@@ -48,3 +52,7 @@ on post-fs
 on property:ro.crypto.type=file
     setprop ro.crypto.state encrypted
     setprop twrp.apex.loaded true
+
+on charger
+    setprop sys.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
