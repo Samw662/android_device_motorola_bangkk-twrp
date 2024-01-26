@@ -19,18 +19,20 @@ Rear Camera 3 | 50 MP f/1.88 OIS
 ### Kernel Source
 From user 13 T3TCS33.18-48-6-2 release-keys
 
-# What's working!? :D
-• Touch (it should works on both displays)
-• Backuo && Restore
-• Wipe /data
-• CPU Temp 
-• Battery && Time
-• Brightness
-• MicroSD Card && USB OTG
-• Mouse through USB OTG
-• Flashing a zips (won't work at all for now)
+### What's working!? :D
+- Touch (it should works on both displays)
+- Backup && Restore
+- Wipe /data
+- CPU Temp 
+- Battery && Time
+- Brightness
+- MicroSD Card && USB OTG
+- Mouse through USB OTG
+- Flashing a zips (won't work at all for now)
 
-# What ISN'T working!? D:
-• Flashing some zips (You won't be able to flash some zips like Magisk)
-• Decryption
-• Touch on custom roms (it works fine in stock rom)
+### What ISN'T working!? D:
+- Flashing some zips (You won't be able to flash some zips like Magisk)
+- Decryption
+- Touch on custom roms (it works fine in stock rom)
+
+### See Wiki for build this source
