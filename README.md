@@ -28,10 +28,9 @@ From user 13 T3TCS33.18-48-6-2 release-keys
 - Brightness
 - MicroSD Card && USB OTG
 - Mouse through USB OTG
-- Flashing a zips (won't work at all for now)
+- Flashing a zips
 
 ### What ISN'T working!? D:
-- Flashing some zips (You won't be able to flash some zips like Magisk)
 - Decryption
 - Touch on custom roms (it works fine in stock rom)
 
