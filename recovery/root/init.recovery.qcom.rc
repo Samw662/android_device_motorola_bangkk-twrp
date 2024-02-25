@@ -28,8 +28,8 @@
 import /init.recovery.qcom_decrypt.rc
 
 on boot
-    write /sys/fs/selinux/enforce 0
     start health-hal-2-1
+    write /sys/fs/selinux/enforce 0
     setprop sys.usb.config.mtp.adb
 
 on init
@@ -40,10 +40,10 @@ on init
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    export LD_LIBRARY_PATH /sbin:/vendor/lib64:/vendor/lib64/hw
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
+    export LD_LIBRARY_PATH /sbin:/vendor/lib64:/vendor/lib64/hw
 
 on post-fs
     start boot-hal-1-1
@@ -51,7 +51,3 @@ on post-fs
 on property:ro.crypto.type=file
     setprop ro.crypto.state encrypted
     setprop twrp.apex.loaded true
-
-on charger
-    setprop sys.usb.controller a600000.dwc3
-    setprop sys.usb.configfs 1
