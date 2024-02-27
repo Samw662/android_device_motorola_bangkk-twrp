@@ -31,11 +31,7 @@
 /usb-otg               auto      /dev/block/sdg1         /dev/block/sdg           flags=display="USB OTG";storage;wipeingui;removable
 
 # Flashable Logical Partitions
-/system_image          emmc      /dev/block/bootdevice/by-name/system_a           flags=display="System image";backup=1;flashimg=1
-/system                ext4      /dev/block/bootdevice/by-name/system_a           flags=display="System";wipeingui
-/vendor_image          emmc      /dev/block/nootdevice/by-name/vendor_a           flags=display="Vendor image";backup=1;flashimg=1
-/vendor                ext4      /dev/block/bootdevice/by-name/vendor_a           flags=display="Vendor";wipeingui
-/product_image         emmc      /dev/block/bootdevice/by-name/product_a          flags=display="Product image";backup=1;flashimg=1
-/product               ext4      /dev/block/bootdevice/by-name/product_a          flags=display="Product";wipeingui
-/system_ext_image      emmc      /dev/block/bootdevice/by-name/system_ext_a       flags=display="System_ext image";backup=1;flashimg=1
-/system_ext            ext4      /dev/block/bootdevice/by-name/system_ext_a       flags=display="System_ext";wipeingui
+/system_image          emmc      /dev/block/bootdevice/by-name/system           flags=backup=1;display="System image";flashimg=1
+/vendor_image          emmc      /dev/block/nootdevice/by-name/vendor           flags=backup=1;display="Vendor image";flashimg=1
+/product_image         emmc      /dev/block/bootdevice/by-name/product          flags=backup=1;display="Product image";flashimg=1
+/system_ext_image      emmc      /dev/block/bootdevice/by-name/system_ext       flags=backup=1;display="System_ext image";flashimg=1
