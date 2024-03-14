@@ -17,7 +17,7 @@ Rear Camera 2 | 8 MP f/2.2 UGA
 Rear Camera 3 | 50 MP f/1.88 OIS
 
 ### Kernel Source
-From user 13 T3TCS33.18-48-6-2 release-keys
+From user 14 U1TC34.22-64-6 release-keys
 
 ### What's working!? :D
 - Touch (it should works on both displays)
